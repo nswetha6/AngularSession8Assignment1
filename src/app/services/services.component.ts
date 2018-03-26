@@ -24,10 +24,15 @@ export class ServicesComponent implements OnInit {
   this.plist=this.ps.getPersonArray();
   }
   getAddValues(name1:string){
-    this.persname=name1;
-    this.plist=this.ps.getAddValuesArray(this.persname);
+    if(name1.length!==0){
+        this.persname=name1;
+        this.plist=this.ps.getAddValuesArray(this.persname);
+       }
+      else
+      {
+        alert("please enter name and submit");
       }
-
+  }
   ngOnInit() {
 
    
